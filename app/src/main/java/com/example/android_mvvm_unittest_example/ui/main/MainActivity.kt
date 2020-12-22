@@ -1,8 +1,8 @@
-package com.example.android_mvvm_unittest_example
+package com.example.android_mvvm_unittest_example.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.android_mvvm_unittest_example.ui.main.MainFragment
+import com.example.android_mvvm_unittest_example.R
 
 class MainActivity : AppCompatActivity() {
 
