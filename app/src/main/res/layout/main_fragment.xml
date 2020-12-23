@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="com.example.android_mvvm_unittest_example.ui.main.MainViewModel" />
+            type="com.example.android_mvvm_unittest_example.ui.main.MainFragViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,8 @@
             android:id="@+id/message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MainFragment"
+            android:text="I'm Main Fragment"
+            android:textColor="@color/purple_700"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
