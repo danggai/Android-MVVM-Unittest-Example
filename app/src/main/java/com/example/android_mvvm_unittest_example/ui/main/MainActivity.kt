@@ -1,18 +1,25 @@
 package com.example.android_mvvm_unittest_example.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.annotation.LayoutRes
 import com.example.android_mvvm_unittest_example.R
+import com.example.android_mvvm_unittest_example.databinding.MainActivityBinding
+import com.example.android_mvvm_unittest_example.ui.BindingActivity
+import org.koin.androidx.viewmodel.ext.android.getViewModel
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BindingActivity<MainActivityBinding>() {
+
+    @LayoutRes
+    override fun getLayoutResId() = R.layout.main_activity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
-                    .commitNow()
+
+        binding.vm = getViewModel()
+        binding.lifecycleOwner = this
+        binding.vm?.let {
+
         }
     }
+
 }
