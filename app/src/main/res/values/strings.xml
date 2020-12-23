@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android-MVVM-Unittest-Example</string>
+    <string name="string_default">I\'m MutableLiveData String\nin R.string</string>
 </resources>
