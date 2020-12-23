@@ -13,6 +13,7 @@ import org.koin.androidx.viewmodel.ext.android.getViewModel
 class MainFragment : BindingFragment<MainFragmentBinding>() {
 
     companion object {
+        val TAG: String = MainFragment::class.java.simpleName
         fun newInstance() = MainFragment()
     }
 

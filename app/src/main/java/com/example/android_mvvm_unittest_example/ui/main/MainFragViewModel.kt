@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 
 class MainFragViewModel : ViewModel() {
 
-    private var mainStr: MutableLiveData<String> = MutableLiveData<String>("나는 FragViewModel에 있는 string이얌")
+    private var mainStr: MutableLiveData<String> = MutableLiveData<String>("I'm MutableLiveData String in MainFragViewModel")
     val _mainStr: MutableLiveData<String> = mainStr
 
 }

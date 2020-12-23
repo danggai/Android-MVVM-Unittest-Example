@@ -12,14 +12,25 @@ class MainActivity : BindingActivity<MainActivityBinding>() {
     @LayoutRes
     override fun getLayoutResId() = R.layout.main_activity
 
+    private lateinit var mVM: MainActViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding.vm = getViewModel()
         binding.lifecycleOwner = this
-        binding.vm?.let {
 
+        binding.vm?.let {
+            mVM = it
         }
+
+        initFragment()
+    }
+
+    private fun initFragment() {
+        supportFragmentManager.beginTransaction()
+            .add(R.id.fragment, MainFragment.newInstance(), MainFragment.TAG)
+            .commit()
     }
 
 }
