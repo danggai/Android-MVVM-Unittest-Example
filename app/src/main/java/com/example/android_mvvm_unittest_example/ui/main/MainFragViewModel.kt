@@ -4,6 +4,7 @@ import android.app.Application
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.MutableLiveData
+import com.example.android_mvvm_unittest_example.util.CommonFunction
 import com.example.android_mvvm_unittest_example.R
 import com.example.android_mvvm_unittest_example.ui.BaseViewModel
 
@@ -22,13 +23,13 @@ class MainFragViewModel(override val app: Application) : BaseViewModel(app) {
         when (v.id) {
             R.id.btn_first -> {
                 Log.d("btnClick", "button first")
-                clickTime += 1
+                clickTime = CommonFunction.numAdd(clickTime, 1)
                 clickTimeDesc.value = String.format(getString(R.string.click_count_desc), clickTime)
             }
             R.id.btn_second -> {
                 Log.d("btnClick", "button second")
                 _remainTimeDesc.value = if (remainTime > 0) {
-                    remainTime -= 1
+                    remainTime = CommonFunction.numAdd(remainTime, -1)
                     String.format(getString(R.string.remain_count_desc), remainTime)
                 } else {
                     getString(R.string.remain_count_desc_fake)
