@@ -58,8 +58,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     // Mockito - TestTool
-    testImplementation 'org.mockito:mockito-core:2.7.22'
-    androidTestImplementation 'org.mockito:mockito-android:2.7.22'
+    testImplementation "org.mockito:mockito-core:+"
+    testImplementation "org.mockito:mockito-inline:+"
+    androidTestImplementation "org.mockito:mockito-android:+"
 
     // Hamcrest - TestTool
     testImplementation 'org.hamcrest:hamcrest-library:1.3'
